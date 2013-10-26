@@ -100,35 +100,33 @@ describe Calculator do
   end
 
   describe ".divide(number)" do
-    # before(:each) do
-    #   subject.divide(1)
-    # end
-      it "divides the total by the number" do
-        subject.divide(3)
-        expect(subject.total).to eq(0)
-      end
 
-      it "handles dividing floating point numbers" do
-        subject.divide(3.33)
-        expect(subject.total).to eq(0)
-      end
-
-      it "handles multiple calls" do
-        subject.divide(5)
-        subject.divide(3)
-        expect(subject.total).to eq(0)
-      end
-
-      it "is chainable" do
-        subject.divide(5).divide(3)
-        expect(subject.total).to eq(0)
-      end
-
-      it "handles strings" do
-        subject.divide("5")
-        expect(subject.total).to eq(0)
-      end
+    it "divides the total by the number" do
+      subject.divide(3)
+      expect(subject.total).to eq(0)
     end
-  # end
+
+    it "handles dividing floating point numbers" do
+      subject.divide(3.33)
+      expect(subject.total).to eq(0)
+    end
+
+    it "handles multiple calls" do
+      subject.divide(5)
+      subject.divide(3)
+      expect(subject.total).to eq(0)
+    end
+
+    it "is chainable" do
+      subject.divide(5).divide(3)
+      expect(subject.total).to eq(0)
+    end
+
+    it "handles strings" do
+      subject.divide("5")
+      expect(subject.total).to eq(0)
+    end
+  end
+
 end
 

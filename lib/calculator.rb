@@ -1,3 +1,4 @@
+# A simple calculator class
 class Calculator
   attr_accessor :total
 
@@ -23,6 +24,10 @@ class Calculator
   def divide(number)
     self.total /= number.to_f
     self
+  end
+
+  def clear
+    self.total = 0
   end
 
 end
